@@ -1,0 +1,22 @@
+<div class="flex flex-col w-full items-center rounded-md">
+  <div class="shadow-md m-5 flex flex-col">
+    <form (ngSubmit)="addCharacter()">
+      <h3 class="text-2xl font-bold m-2">Agregar personaje</h3>
+      <div class="m-2">
+        <input
+          type="text"
+          name="name"
+          [(ngModel)] = "character.name"
+          class="w-full mb-2 h-8 border-b-2 border-gray-200" placeholder="Nombre del personaje">
+        <input
+          type="text"
+          name="power"
+          [(ngModel)] = "character.power"
+          class="w-full mb-2 h-8 border-b-2 border-gray-200" placeholder="Poder del personaje">
+      </div>
+      <button
+        type="submit"
+        class="ml-2 mt-2 text-white focus:outline-none focus:ring-4 font-medium rounded-xl text-sm px-5 py-2.5 text-center mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">Agregar</button>
+    </form>
+  </div>
+</div>

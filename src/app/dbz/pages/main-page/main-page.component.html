@@ -1,0 +1,10 @@
+<div class="flex flex-row w-auto mt-10">
+  <app-dbz-list [characterList]="characters"
+    (onDelete)="onDeleteCharacter($event)"
+    class="flex flex-col w-full items-center m-5"
+  ></app-dbz-list>
+  <app-add-character
+    (onNewCharacter)="onNewCharacter($event)"
+    class="flex flex-col w-full items-center rounded-md"
+  ></app-add-character>
+</div>

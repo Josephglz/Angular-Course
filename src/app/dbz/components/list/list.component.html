@@ -1,0 +1,35 @@
+<div class="flex flex-col w-full items-center m-5">
+  <div class="w-full">
+    <table class="w-full">
+      <thead class="bg-gray-800 text-white">
+        <tr>
+          <th scope="col" class="px-6 py-3">ID</th>
+          <th scope="col" class="px-6 py-3">Nombre</th>
+          <th scope="col" class="px-6 py-3">Poder</th>
+          <th scope="col" class="px-6 py-3">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let character of characterList;
+          let i = index;
+          let isOdd = odd;"
+          [ngClass]="{'bg-gray-300': isOdd}"
+          class="border-b border-gray-700">
+          <td class="text-center px-6 py-4 text-blue-600 font-bold">
+            {{i+1}}
+          </td>
+          <td class="px-6 py-4">
+            {{character.name}}
+          </td>
+          <td class="px-6 py-4">
+            {{character.power}}
+          </td>
+          <td class="px-6 py-4 text-center">
+            <button (click)="onDeleteCharacter(character.id)" class="text-red-600 font-bold">X</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
